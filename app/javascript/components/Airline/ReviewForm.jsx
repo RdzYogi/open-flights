@@ -3,10 +3,9 @@ import React, { Fragment } from 'react'
 export default function ReviewForm(props) {
   const ratingOptions = [5, 4, 3, 2, 1].map((score, index) => {
       return (
-        <Fragment>
+        <Fragment key={`rating-${index}`}>
           <input type='radio'
             value={score}
-            id={`rating-${score}`}
             name='rating'
             checked={props.review.score == score}
             onChange={() => console.log('selected:', score)} />

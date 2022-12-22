@@ -5,9 +5,11 @@ import Header from "./Header";
 import ReviewForm from "./ReviewForm";
 import Review from "./Review";
 
-const Airline = (props) => {
+const Airline = () => {
   const [airline, setAirline] = useState({})
-  const [review, setReview] = useState({})
+
+  // Create a state for the review form
+  const [review, setReview] = useState({title: '', description: '', score: 0})
 
   // Set loaded to false to prevent the page from rendering before the data is loaded
   const [loaded, setLoaded] = useState(false)
@@ -33,7 +35,6 @@ const Airline = (props) => {
   // Create a function to handle the form change
   const handleChange = (e) => {
     e.preventDefault()
-
     // The next line creates a new object with the same properties as review
     // Then it adds the new property to the object
     // The new property is the name of the input field
@@ -42,8 +43,10 @@ const Airline = (props) => {
     // That way, the review state is always up to date with the form
     // And we can send the review state to the API
     // To create a new review in the database
+    const name = e.target.name || ""
+    const value = e.target.value || ""
 
-    setReview(Object.assign({}, review, {[e.target.name]: e.target.value}))
+    setReview(Object.assign({}, review, { [name]: value }))
   }
 
   // Create a function to handle the form submit

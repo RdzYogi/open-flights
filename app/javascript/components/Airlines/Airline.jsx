@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 // Individual airline component in the index page
 const Airline = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div className="card">
       <div className="airline-logo">

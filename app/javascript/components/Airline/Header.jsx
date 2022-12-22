@@ -12,7 +12,7 @@ const Header = (props) => {
       <h1><img src={image_url} alt={name} /> {name}</h1>
       <div>
         <div className='total-reviews'> {total} User reviews</div>
-        <div className='star-rating'></div>
+        <div className='star-rating'>{avg_score}</div>
         <div className='total-out-of'>{avg_score} out of 5</div>
       </div>
     </div>

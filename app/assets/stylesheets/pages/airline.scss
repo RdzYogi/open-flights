@@ -1,0 +1,21 @@
+.wrapper{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.column{
+  background: white;
+  height: 100vh;
+  overflow: scroll;
+
+  &:last-child{
+    background: #000;
+  }
+}
+.column::-webkit-scrollbar{
+  display: none;
+}
+
+.main{
+  padding-left: 50px;
+}

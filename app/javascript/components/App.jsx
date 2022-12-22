@@ -7,9 +7,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={Airlines} />
-        <Route exact path="/airlines" element={Airlines} />
-        <Route exact path="/airlines/:slug" element={Airline} />
+        <Route exact path="/" element={<Airlines />} />
+        <Route exact path="/airlines" element={<Airlines />} />
+        <Route exact path="/airlines/:slug" element={<Airline />} />
       </Routes>
     </Router>
   )
